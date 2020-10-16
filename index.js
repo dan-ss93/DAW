@@ -1,4 +1,3 @@
-var d = new Date();
 function inicio(){
     
     window.document.getElementById("listaPropiedades")
@@ -7,8 +6,8 @@ function inicio(){
     <tr><td>`+location.port+`</td></tr>
     <tr><td>`+document.title+`</td></tr>
     <tr><td>`+Math.floor(Math.random() *100)+`</td></tr>
-    <tr><td>`+Date().toLocaleDateString+`</td></tr>
-    <tr><td>`+location.href+`</td></tr>
+    <tr><td>`+(new Date().toLocaleDateString())+`</td></tr>
+    <tr><td>`+(new Date().toLocaleTimeString())+`</td></tr>
     <tr><td>`+Number.MAX_VALUE+`</td></tr>
     <tr><td>`+Number.MIN_VALUE+`</td></tr>
     <tr><td>`+screen.availHeight+`</td></tr>
