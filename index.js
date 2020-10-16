@@ -1,3 +1,59 @@
+function inicio(){
+
+    
+    window.document.getElementById("listaPropiedades")
+    .innerHTML=`<table><tr><td>`+navigator.language+`</td></tr>
+    <tr><td>`+location.href+`</td></tr>
+    <tr><td>`+location.port+`</td></tr>
+    <tr><td>`+document.title+`</td></tr>
+    <tr><td>`+Math.floor(Math.random() *100)+`</td></tr>
+    <tr><td>`+new Date().getDate()+`</td></tr>
+    <tr><td>`+location.href+`</td></tr>
+    <tr><td>`+Math.max()+`</td></tr>
+    <tr><td>`+Math.min()+`</td></tr>
+    <tr><td>`+screen.availHeight+`</td></tr>
+
+    </table>`;
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*console.log("éste mensaje se muestra por consola");
 
 var lista;
@@ -32,7 +88,4 @@ window.onload = function listaPropiedades() {
 
     
 
-
-
-
-
+*/
