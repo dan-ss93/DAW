@@ -1,3 +1,4 @@
+//Ex. 2
 function inicio(){
     
     window.document.getElementById("listaPropiedades")
@@ -16,8 +17,28 @@ function inicio(){
     
     }
 
+//Ex. 3
+function input_titulo () {
+    document.cookie = document.getElementById("input_titulo").value;
+    //alert(document.cookie); 
+    }
 
+//Ex. 4
 
+window.onload = cuentaAtras;
+var segundos = 5;
+
+    function cuentaAtras() {
+    document.getElementById('countdown').innerHTML = segundos;
+
+    if(segundos==0){
+    window.open("numero.html", "", "height=300, width=300");
+
+}else{
+segundos-=1;
+setTimeout("cuentaAtras()",1000);
+}
+}
 
 
 
