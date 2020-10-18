@@ -1,5 +1,5 @@
 1.	Crea una nueva carpeta de nombre DAW_M06_ACT02 en tu área de trabajo de Visual Studio Code. Dentro crea un nuevo documento  HTML con el nombre “index.html” y un nuevo JS con el nombre “index.js”.  Vincula el HTML con el JavaScript.
-2.	Dentro de index.html añade un div con id “listaPropiedades”. Utiliza la función onload de window para que una vez cargado todo el HTML se llame a una función que cree dentro de “listaPropiedades” una lista ordenada HTML ( <OL> <LI></LI> .... </OL>) como la mostrada a continuación pero a añadiendo los valores correspondientes  obtenidos de los métodos de los objetos predefinidos en JavaScript:
+2.	Dentro de index.html añade un div con id “listaPropiedades”. Utiliza la función onload de window para que una vez cargado todo el HTML se llame a una función que cree dentro de “listaPropiedades” una lista ordenada HTML (<OL> <LI></LI> .... </OL>) como la mostrada a continuación pero a añadiendo los valores correspondientes  obtenidos de los métodos de los objetos predefinidos en JavaScript:
   1.	Lengua predefinida en el navegador
   2.	URL de la página web :
   3.	Puerto de la URL:
