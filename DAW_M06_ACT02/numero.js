@@ -14,7 +14,7 @@ function aciertaNumero(){
 
 if (random1==numero){
     window.document.getElementById("acierta").innerHTML="Has acertado.";
-    window.close;
+    window.close(),3000;
 
 
 }else if (random1>numero){
