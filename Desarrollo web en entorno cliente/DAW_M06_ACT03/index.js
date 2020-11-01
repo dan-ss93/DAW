@@ -3,19 +3,20 @@ de los principales actores. También ha de guardar el actor favorito guardando e
 */
 class SerieTV {
     constructor (titulo, tematica, actoresPrincipales){
-        var arrayActores = new Array();
+        let arrayActores = new Array();
         this.titulo=titulo;
         this.tematica=tematica;
         this.actores=actoresPrincipales;
+        this.actorAleatorio='';
 
 /*2.Añade a la clase Serie una función generaActorFavorito() 
 que establezca como número de actor favorito un número aleatorio del total de actores que tenga.
 */    
         this.generaActorFavorito = function(){
-            var long = actoresPrincipales.length;
-            let calc = Math.floor(Math.random()*(long));
-           arrayActores = actoresPrincipales[calc];
-           console.log(arrayActores);
+            const long = actoresPrincipales.length;
+            const calc = Math.floor(Math.random()*(long));
+            this.actorAleatorio = actoresPrincipales[calc];
+            console.log(arrayActores);
         }
         
     }
@@ -24,18 +25,18 @@ que establezca como número de actor favorito un número aleatorio del total de 
 Al inicializar cada objeto correspondiente a una serie llama a la función " generaActorFavorito ()" 
 para establecer inicialmente un actor favorito. Añade las series a un array “total_series”.
 */
-var show01= new SerieTV('Dexter ',  'Drama ', ['Michael C Hall ' ,'Jennifer Carpenter']);
+let show01= new SerieTV('Dexter ',  'Drama ', ['Michael C Hall ' ,'Jennifer Carpenter']);
 show01.generaActorFavorito();
 
-var show02 = new SerieTV('Samurai Gourmet' ,  'Cocina' ,  ['Naoto Takenaka' ,'Tetsuji Tamayama' , 'Honami Suzuki '] );
+let show02 = new SerieTV('Samurai Gourmet' ,  'Cocina' ,  ['Naoto Takenaka' ,'Tetsuji Tamayama' , 'Honami Suzuki '] );
 show02.generaActorFavorito();
 
-var show03 = new SerieTV ('Breaking Bad ', 'Drama ', ['Aaron Paul ','Bryan Cranston ', 'RJ Mitte ', 'Anna Gunn ']); 
+let show03 = new SerieTV ('Breaking Bad ', 'Drama ', ['Aaron Paul ','Bryan Cranston ', 'RJ Mitte ', 'Anna Gunn ']); 
 show03.generaActorFavorito();
 
 console.log("-------------------------");
 
-var total_series = new Array();
+let total_series = new Array();
 total_series.push(show01);
 total_series.push(show02);
 total_series.push(show03);
@@ -43,19 +44,34 @@ console.log(total_series);
 
 console.log("-------------------------");
 
-/*4.Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". 
+/*4. Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". 
 Debe mostrar por cada serie el título, la temática el número y nombre de actor favorito, y el listado de actores de la serie. 
 */
 function muestraArray(){
 
     let contenido="";
 
-    total_series.forEach(function(serie, posicion){
+    total_series.forEach((serie, posicion) => {
 
-    contenido += "<div id=d"+posicion+">Titulo: "+serie.titulo+"<br> Temática: "+serie.tematica+" <br> Actor Favorito: "+serie.actoresPrincipales+" <br> Actores: "+serie.actores+" <br><br>";
-
+        contenido += "<div id=d"+posicion+">Titulo: "+serie.titulo+"<br> Temática: "+serie.tematica+" <br> Actor Favorito: "+serie.actorAleatorio+" <br> Actores: "+serie.actores+" <br><br>";
+        
     });
     document.getElementById("resultado").innerHTML = contenido;
-   
+}
+/*5. Permite añadir una nueva serie (con el array de actores vacío) a partir de un input para el título, 
+un input para la temática y un botón para añadir la serie. Una vez añadida actualiza el array de series.
+*/
+
+function addSerie(){
+
+    event.preventDefault();
+
+    let title = document.getElementById("addTitulo").value; 
+    let thematic = document.getElementById("addTematica").value;
+
+    const nuevaSerie = new SerieTV (title, thematic, [] );
+    total_series.push(nuevaSerie);
+    console.log(total_series);
 
 }
+

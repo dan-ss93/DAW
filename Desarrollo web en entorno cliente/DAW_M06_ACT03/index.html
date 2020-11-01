@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
-</head>
-<body>
-    
-<!--/*4.Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". 
-Debe mostrar por cada serie el título, la temática el número y nombre de actor favorito, y el listado de actores de la serie. 
-*/-->
-<section>
-    <button onclick="muestraArray()">MUESTRA SERIES</button>
-    <div id="resultado"></div>
-</section>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        
+        <!--/*4.Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". 
+        Debe mostrar por cada serie el título, la temática el número y nombre de actor favorito, y el listado de actores de la serie. 
+        */-->
+        <section>
+            <button onclick="muestraArray()">MUESTRA SERIES</button>
+            
+            <form>
+                <h2>Guardar Serie</h2>
+                <label>T&iacute;tulo de la Serie:</label>
+                <input id="addTitulo" type="text"/>
+                <label>Tematica:</label>
+                <input id="addTematica" type="text"/>
+                <button onclick="addSerie()">Guardar T&iacute;tulo</button>
+            </form>
+            <br/><br/>
+            <div id="resultado"></div>
+        </section>
+        
+    </body>
 </html>
