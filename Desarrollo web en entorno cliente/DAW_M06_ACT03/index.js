@@ -26,9 +26,6 @@ show03.generaActorFavorito();
 
 console.log("-------------------------");
 
-
-
-
 var total_series = new Array();
 total_series.push(show01);
 total_series.push(show02);
@@ -39,8 +36,30 @@ console.log("-------------------------");
 
 function muestraArray(){
 window.document.getElementById("resultado")
-.innerHTML=`<table><tr><td>`+total_series[0].titulo +total_series[0].tematica+ total_series[0].actores+total_series[0].actoresPrincipales+`</td></tr>
-<tr><td>`+total_series[1].titulo +total_series[1].tematica+ total_series[1].actores+total_series[1].actoresPrincipales+`</td></tr>
-<tr><td>`+total_series[2].titulo +total_series[2].tematica+ total_series[2].actores+total_series[2].actoresPrincipales+`</td></tr>
-    </table>`;
+.innerHTML +="<div id='serie" + posicion + "'"
++"<ul>"
++"<li> Serie: "+ (posicion +1) +"</li>" 
++"<ul>"
++"<li> Título: "+ titulo + "</li>" 
++"<li> Temática: "+ tematica + "</li>"
++"<li> Actores : " + recorrerActores(posicion) + "<li>"
++"<li> Actor favorito: "+ actoresPrincipales +"</li>"
++"</ul>"
++"</ul>"
++"</div>";
+};
+
+function recorrerActores(posicion){
+    var actoresTotales ="";
+    total_series[posicion].actoresPrincipales.forEach(function(actor,pos){
+        actoresTotales += "<div id='actor'" + pos + "'>"
+        +"<ul>"
+        +"<li>"+ actor + "</li>"
+        +"</ul>"
+        +"</div>";
+        return actores;
+    });
 }
+
+
+
