@@ -1,1 +1,7 @@
-Exercices.
+1.	Crea una clase para estructurar la información de una serie de televisión guardando su título, la temática, array con los nombres de los principales actores. También ha de guardar el actor favorito guardando el número de actor correspondiente en el array de actores.
+2.	Añade a la clase Serie una función generaActorFavorito() que establezca como número de actor favorito un número aleatorio del total de actores que tenga.
+3.	Crea inicialmente 3 series, la primera con 2 actores, la segunda con 3 actores y la tercera con 4 actores. Al inicializar cada objeto correspondiente a una serie llama a la función " generaActorFavorito ()" para establecer inicialmente un actor favorito. Añade las series a un array “total_series”.
+4.	Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". Debe mostrar por cada serie el título, la temática el número y nombre de actor favorito, y el listado de actores de la serie. 
+5.	Permite añadir una nueva serie (con el array de actores vacío) a partir de un input para el título, un input para la temática y un botón para añadir la serie. Una vez añadida actualiza el array de series.
+6.	Modifica el código que muestra las series para añadir a cada serie un botón que al clicarlo borre la serie correspondiente.
+7.	Modifica el código que muestra las series para añadir para cada actor un botón que al clicarlo borre el actor correspondiente.
