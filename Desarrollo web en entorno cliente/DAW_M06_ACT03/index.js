@@ -10,8 +10,7 @@ class SerieTV {
 
 /*2.Añade a la clase Serie una función generaActorFavorito() 
 que establezca como número de actor favorito un número aleatorio del total de actores que tenga.
-*/
-    
+*/    
         this.generaActorFavorito = function(){
             var long = actoresPrincipales.length;
             let calc = Math.floor(Math.random()*(long));
@@ -21,7 +20,6 @@ que establezca como número de actor favorito un número aleatorio del total de 
         
     }
 }
-
 /*3.Crea inicialmente 3 series, la primera con 2 actores, la segunda con 3 actores y la tercera con 4 actores. 
 Al inicializar cada objeto correspondiente a una serie llama a la función " generaActorFavorito ()" 
 para establecer inicialmente un actor favorito. Añade las series a un array “total_series”.
@@ -54,10 +52,10 @@ function muestraArray(){
 
     total_series.forEach(function(serie, posicion){
 
-    contenido += "<div id=d"+posicion+">Titulo: "+serie[0]+"<br> Tematica: "+serie[1]+" <br> Actor Favorito: "+serie[3]+" <br> Actores: "+serie[2]+" <br><br>";
+    contenido += "<div id=d"+posicion+">Titulo: "+serie.titulo+"<br> Temática: "+serie.tematica+" <br> Actor Favorito: "+serie.actoresPrincipales+" <br> Actores: "+serie.actores+" <br><br>";
 
     });
     document.getElementById("resultado").innerHTML = contenido;
-
+   
 
 }
