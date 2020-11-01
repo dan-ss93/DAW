@@ -3,7 +3,6 @@ de los principales actores. También ha de guardar el actor favorito guardando e
 */
 class SerieTV {
     constructor (titulo, tematica, actoresPrincipales){
-        let arrayActores = new Array();
         this.titulo=titulo;
         this.tematica=tematica;
         this.actores=actoresPrincipales;
@@ -15,8 +14,7 @@ que establezca como número de actor favorito un número aleatorio del total de 
         this.generaActorFavorito = function(){
             const long = actoresPrincipales.length;
             const calc = Math.floor(Math.random()*(long));
-            this.actorAleatorio = actoresPrincipales[calc];
-            console.log(arrayActores);
+            this.actorAleatorio = calc;
         }
         
     }
@@ -52,12 +50,10 @@ function muestraArray(){
 
     total_series.forEach((serie, posicion) => {
 
-        contenido +="<div id=d"+posicion+">Titulo: "+serie.titulo+"<br /> Temática: "+serie.tematica+" <br /> Actor Favorito: "+serie.actorAleatorio+" <br />";
-        contenido +=" Actores: " 
+        contenido +="<div id=d"+posicion+"> <b>Titulo: </b>"+serie.titulo+"<br /> <b>Temática: </b>"+serie.tematica+" <br /> <b>Actor Favorito:</b> "+serie.actores[serie.actorAleatorio]+" <br />";
+        contenido +=" <b>Actores:</b>" 
         
         serie.actores.forEach((actor, indiceActor)=>{
-            console.log(actor);
-            console.log(indiceActor);
             contenido += actor + " <button onClick='borrarActor(" + posicion + "," + indiceActor +")'>X</button> <br />"
         });
 
@@ -91,7 +87,9 @@ function borrarSerie(propiedad){
     total_series.splice(propiedad, 1);
     muestraArray();
 }
-
+/*7.Modifica el código que muestra las series para añadir para cada 
+actor un botón que al clicarlo borre el actor correspondiente.
+*/
 function borrarActor (indiceSerie, actorABorrar){
     total_series[indiceSerie].actores.splice(actorABorrar, 1);
     muestraArray();
