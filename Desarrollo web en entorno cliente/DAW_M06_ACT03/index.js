@@ -43,7 +43,6 @@ total_series.push(show03);
 console.log(total_series);
 
 console.log("-------------------------");
-
 /*4. Añade al HTML un botón “MUESTRA SERIES” que al clicarlo muestre la información de todas las series dentro del array " total_series ". 
 Debe mostrar por cada serie el título, la temática el número y nombre de actor favorito, y el listado de actores de la serie. 
 */
@@ -53,7 +52,16 @@ function muestraArray(){
 
     total_series.forEach((serie, posicion) => {
 
-        contenido += "<div id=d"+posicion+">Titulo: "+serie.titulo+"<br> Temática: "+serie.tematica+" <br> Actor Favorito: "+serie.actorAleatorio+" <br> Actores: "+serie.actores+" <br><br>";
+        contenido +="<div id=d"+posicion+">Titulo: "+serie.titulo+"<br /> Temática: "+serie.tematica+" <br /> Actor Favorito: "+serie.actorAleatorio+" <br />";
+        contenido +=" Actores: " 
+        
+        serie.actores.forEach((actor, indiceActor)=>{
+            console.log(actor);
+            console.log(indiceActor);
+            contenido += actor + " <button onClick='borrarActor(" + posicion + "," + indiceActor +")'>X</button> <br />"
+        });
+
+        contenido+= "<br /><button onclick='borrarSerie(" + posicion +")'> Borrar serie </button><br /><br />";
         
     });
     document.getElementById("resultado").innerHTML = contenido;
@@ -61,17 +69,30 @@ function muestraArray(){
 /*5. Permite añadir una nueva serie (con el array de actores vacío) a partir de un input para el título, 
 un input para la temática y un botón para añadir la serie. Una vez añadida actualiza el array de series.
 */
-
 function addSerie(){
 
     event.preventDefault();
 
-    let title = document.getElementById("addTitulo").value; 
-    let thematic = document.getElementById("addTematica").value;
+    const title = document.getElementById("addTitulo").value; 
+    const thematic = document.getElementById("addTematica").value;
 
     const nuevaSerie = new SerieTV (title, thematic, [] );
     total_series.push(nuevaSerie);
     console.log(total_series);
 
+    muestraArray();
+    document.getElementById("addTitulo").value = "";
+    document.getElementById("addTematica").value ="";
+}
+/*6. Modifica el código que muestra las series para añadir a cada 
+serie un botón que al clicarlo borre la serie correspondiente.
+*/
+function borrarSerie(propiedad){
+    total_series.splice(propiedad, 1);
+    muestraArray();
 }
 
+function borrarActor (indiceSerie, actorABorrar){
+    total_series[indiceSerie].actores.splice(actorABorrar, 1);
+    muestraArray();
+}
