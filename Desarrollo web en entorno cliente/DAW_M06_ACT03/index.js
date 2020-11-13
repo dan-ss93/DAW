@@ -94,3 +94,5 @@ function borrarActor (indiceSerie, actorABorrar){
     total_series[indiceSerie].actores.splice(actorABorrar, 1);
     muestraArray();
 }
+var myArray2 = new Array(3,2)
+console.log(myArray2);

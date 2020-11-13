@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script> 
+</head>
+<body>
+    <form>
+        <h2>DAW_M06_ACT04 : Manipulación del DOM</h2>
+        <label>Nombre: </label>
+        <input id="nombre" type="text"/>
+        <label>Color :</label>
+        <input id="color" type="text"/>
+        <button onclick="addCompetidor()">Añade Participante</button>
+    </form>
+    <br>
+        <button onclick="finalizaCompeticion()">Finaliza competición</button>
+    <br>
+    <br>
+        <label>Posición: </label>
+        <input id="posicion" type="number"/>
+        <button onclick="borraParticipante()">Borra un participante</button>
+    <br>
+    <br>
+        <label>Posición final: </label>
+        <input id="posicionfinal" type="number"/>
+        <button onclick="mueveParticipante()">Mueve un participante</button>
+    <br>
+    <br>
+        <button onclick="modificaParticipante()">Modifica un participante</button>
+    <br>
+    <br>
+
+    <h3>Participantes</h3>
+    <ol id="list"></ul>
+
+</body>
+</html>
