@@ -1,13 +1,18 @@
-const list = document.getElementById("list");
+var listaHijos ;
+var lis = document.body.getElementsByTagName("li");
 
 function addCompetidor(){
-    nombreParticipante = document.getElementById("nombre");
-    colorParticipante = document.getElementById("color");
+    event.preventDefault();
+    let nombreCompetidor = document.getElementById("nombre").value;
+    let colorCompetidor = document.getElementById("color").value;
 
-    const li = document.createElement("li");
-    li.innerHTML = nombreParticipante.value + colorParticipante.value;
-    list.appendChild(li);
+    listaHijos = document.createElement("li");
 
-    nombreParticipante.value = "";
-    colorParticipante.value="";
+    listaHijos.innerHTML = nombreCompetidor;
+    listaHijos.style.color = colorCompetidor;
+    
+    listaParticipantes = listaHijos.parentNode;
+
+    document.body.appendChild(listaHijos);
+
 }
