@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h2>DAW_M06_ACT05: Control de formularios y persistencia en cookies </h2>
+        <form name="miFormulario">
+            <label>Usuario: </label>
+                <input id="inputNick" type="text"/>
+                    <p>
+            <label>Password: </label><input id="inputPass1" type="text"/> 
+            <label>Confirma Password: </label><input id="inputPass2" type="text"/>
+                    <p>
+            <label>Email: </label>
+                <input id="inputEmail" type="text"/>
+            
+            <label>Afición: </label>
+                <select name="transporte" id="color" multiple>
+                 <option value="programar">Programar</option>
+                 <option value="leer">Leer</option>
+                 <option value="cantar">Cantar</option>
+                    <option value="bailar">Bailar</option>
+                </select>           
+                    <p>
+            <label>DNI: </label>
+                <input id="inputDNI" type="text"/>
+                    <p>
+            <label>Acepto las condiciones</label>
+                <input type="checkbox" id="check">
+                <button onclick="registrarse()">Regístrarse</button>
+                    <p>
+                <button onclick="guardarDatos()">Guardar Datos</button>
+                <button onclick="recuperarDatos()">Recuperar Datos</button>
+                    <p>
+            <label>Nueva afición: </label>
+                <input id="inputAficion" type="text">
+                <button onclick="añadirAficion()">Añadir Afición</button>
+            
+        </form>
+</body>
+</html>
