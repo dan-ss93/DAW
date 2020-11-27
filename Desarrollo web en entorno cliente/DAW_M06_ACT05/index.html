@@ -5,41 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js" defer></script>
+
 </head>
 <body>
-    <h2>DAW_M06_ACT05: Control de formularios y persistencia en cookies </h2>
-        <form name="miFormulario">
-            <label>Usuario: </label>
-                <input id="inputNick" type="text"/>
-                    <p>
-            <label>Password: </label><input id="inputPass1" type="text"/> 
-            <label>Confirma Password: </label><input id="inputPass2" type="text"/>
-                    <p>
-            <label>Email: </label>
-                <input id="inputEmail" type="text"/>
-            
-            <label>Afición: </label>
-                <select name="transporte" id="color" multiple>
-                 <option value="programar">Programar</option>
-                 <option value="leer">Leer</option>
-                 <option value="cantar">Cantar</option>
-                    <option value="bailar">Bailar</option>
-                </select>           
-                    <p>
-            <label>DNI: </label>
-                <input id="inputDNI" type="text"/>
-                    <p>
-            <label>Acepto las condiciones</label>
-                <input type="checkbox" id="check">
-                <button onclick="registrarse()">Regístrarse</button>
-                    <p>
-                <button onclick="guardarDatos()">Guardar Datos</button>
-                <button onclick="recuperarDatos()">Recuperar Datos</button>
-                    <p>
-            <label>Nueva afición: </label>
-                <input id="inputAficion" type="text">
-                <button onclick="añadirAficion()">Añadir Afición</button>
-            
-        </form>
+  <form name="form" id="form">
+    <p>
+      <label for="usuario">
+          <span>Usuario: </span>
+          <input type="text" class="usuario" id="usuario" name="usuario">
+          <span class="error" aria-live="polite"></span>
+      </label>
+    </p>
+    <p>
+      <label for="password">
+          <span>Password: </span>
+          <input type="text" class="password" id="password" name="password">
+          <span class="error" aria-live="polite"></span>
+      </label>
+      <label for="password2">
+        <span>Confirma password: </span>
+        <input type="text" class="password2" id="password2" name="password2">
+        <span class="error" aria-live="polite"></span>
+    </label>
+    </p>
+    <p>
+      <label for="mail">
+          <span>Mail: </span>
+          <input type="text" class="mail" id="mail" name="mail">
+          <span class="error" aria-live="polite"></span>
+      </label>
+      <label for="aficiones">
+        <span>Aficiones: </span>
+        <select name="aficiones" id="aficiones" multiple>
+          <option value="programar">Programar</option>
+          <option value="leer">Leer</option>
+          <option value="cantar">Cantar</option>
+          <option value="bailar">Bailar</option>
+          <option id="nuevaOption"></option>
+         </select>           
+      </label>
+    </p>
+    <p>
+      <label for="DNI">
+          <span>DNI: </span>
+          <input type="text" class="mail" id="mail" name="mail">
+          <span class="error" aria-live="polite"></span>
+      </label>
+    </p>
+      <label for="vehicle1"> Acepto las condiciones</label>
+          <input type="checkbox" id="aceptar_condiciones" name="aceptar_condiciones" value="aceptar_condiciones">
+      <button type="submit">Regístrate</button>
+      <p>
+      <button onclick="guardarDatos()">Guardar Datos</button>
+      <button onclick="recuperarDatos()">Recuperar Datos</button>
+    </p>
+      <p>
+      <label for="nuevaAficion">Nueva Afición: </label> 
+        <input type="text" class="nuevaAficion" id="nuevaAficion" name="nuevaAficion">
+        <button onclick="añadirAficion()">Añadir Afición</button>
+      </p>
+      
+  </form>
 </body>
-</html>
+  </div>
+                </div>
