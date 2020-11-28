@@ -12,27 +12,33 @@
     <p>
       <label for="usuario">
           <span>Usuario: </span>
-          <input type="text" class="usuario" id="usuario" name="usuario">
+          <input type="text" class="usuario" id="inputNick" name="usuario">
           <span class="error" aria-live="polite"></span>
+          <div id="usuario"></div>
       </label>
     </p>
     <p>
       <label for="password">
           <span>Password: </span>
-          <input type="text" class="password" id="password" name="password">
+          <input type="text" class="password" id="inputPass1" name="password">
           <span class="error" aria-live="polite"></span>
+          <div id="password1"></div>
+
       </label>
       <label for="password2">
         <span>Confirma password: </span>
-        <input type="text" class="password2" id="password2" name="password2">
+        <input type="text" class="password2" id="inputPass2" name="password2">
         <span class="error" aria-live="polite"></span>
+        <div id="password2"></div>
+
     </label>
     </p>
     <p>
       <label for="mail">
           <span>Mail: </span>
-          <input type="text" class="mail" id="mail" name="mail">
+          <input type="text" class="mail" id="inputEmail" name="mail">
           <span class="error" aria-live="polite"></span>
+          <div id="email"></div>
       </label>
       <label for="aficiones">
         <span>Aficiones: </span>
@@ -41,14 +47,13 @@
           <option value="leer">Leer</option>
           <option value="cantar">Cantar</option>
           <option value="bailar">Bailar</option>
-          <option id="nuevaOption"></option>
          </select>           
       </label>
     </p>
     <p>
       <label for="DNI">
           <span>DNI: </span>
-          <input type="text" class="mail" id="mail" name="mail">
+          <input type="text" class="mail" id="inputDNI" name="dni">
           <span class="error" aria-live="polite"></span>
       </label>
     </p>
@@ -61,7 +66,7 @@
     </p>
       <p>
       <label for="nuevaAficion">Nueva Afición: </label> 
-        <input type="text" class="nuevaAficion" id="nuevaAficion" name="nuevaAficion">
+        <input type="text" class="nuevaAficion" id="inputAficion" name="nuevaAficion">
         <button onclick="añadirAficion()">Añadir Afición</button>
       </p>
       
