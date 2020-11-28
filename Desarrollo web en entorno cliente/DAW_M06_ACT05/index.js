@@ -130,19 +130,16 @@ function validarFormulario(){
 
 
 
-function añadirAficion(option){
+function añadirAficion(){
+	event.preventDefault();
+    var aficiones = document.getElementById("aficiones");
+    var inputAficion = document.getElementById("inputAficion").value;
+    var option = document.createElement("option");
+    option.text = inputAficion;
+    aficiones.add(option);
+    }
 
-	var aficiones = document.getElementById("aficiones");
 
-	var aficionNueva = document.getElementById("nuevaAficion");
-
-	var option = document.createElement("option");
-
-	option.text = aficionNueva;
-
-	aficiones.add(option);
-
-}
 
 function guardarDatos(){
 
@@ -184,7 +181,7 @@ function recuperarDatos(){
 	validarPassword();
 
 	validarEmail();
-	
+
 	validarDNI();
 
 	event.preventDefault();
