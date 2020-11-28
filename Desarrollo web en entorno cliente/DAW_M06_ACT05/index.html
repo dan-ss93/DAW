@@ -8,37 +8,34 @@
 
 </head>
 <body>
-  <form name="form" id="form">
+  <form onsubmit="validarFormulario()" name="form" id="form">
     <p>
       <label for="usuario">
           <span>Usuario: </span>
           <input type="text" class="usuario" id="inputNick" name="usuario">
-          <span class="error" aria-live="polite"></span>
           <div id="usuario"></div>
       </label>
+      <p id="nick"></p>
     </p>
     <p>
       <label for="password">
           <span>Password: </span>
           <input type="text" class="password" id="inputPass1" name="password">
-          <span class="error" aria-live="polite"></span>
-          <div id="password1"></div>
+          <p id="password1"></p>
 
       </label>
       <label for="password2">
         <span>Confirma password: </span>
-        <input type="text" class="password2" id="inputPass2" name="password2">
-        <span class="error" aria-live="polite"></span>
-        <div id="password2"></div>
+        <input type="text" class="password2" id="inputPass2" name="password2" >
+        <p id="password2"></p>
 
     </label>
     </p>
     <p>
       <label for="mail">
           <span>Mail: </span>
-          <input type="text" class="mail" id="inputEmail" name="mail">
-          <span class="error" aria-live="polite"></span>
-          <div id="email"></div>
+          <input type="text" class="mail" id="inputEmail" name="mail" value="correo" >
+          <p id="email"></p>
       </label>
       <label for="aficiones">
         <span>Aficiones: </span>
@@ -47,27 +44,28 @@
           <option value="leer">Leer</option>
           <option value="cantar">Cantar</option>
           <option value="bailar">Bailar</option>
-         </select>           
-      </label>   
+          <p id="hobby"></p>
+         </select>             
       </label>
     </p>
     <p>
       <label for="DNI">
           <span>DNI: </span>
-          <input type="text" class="mail" id="inputDNI" name="dni">
-          <span class="error" aria-live="polite"></span>
+          <input type="text" class="DNI" id="inputDNI" name="dni">
+          <p id="dni"></p>
       </label>
     </p>
-      <label for="vehicle1"> Acepto las condiciones</label>
-          <input type="checkbox" id="aceptar_condiciones" name="aceptar_condiciones" value="aceptar_condiciones">
+      <label for="condiciones"> Acepto las condiciones</label>
+          <input type="checkbox" id="aceptar_condiciones" name="aceptar_condiciones">
       <button type="submit">Regístrate</button>
+      <p id="resultado"></p>
       <p>
       <button onclick="guardarDatos()">Guardar Datos</button>
       <button onclick="recuperarDatos()">Recuperar Datos</button>
     </p>
       <p>
         <label for="nuevaAficion">Nueva Afición: </label> 
-        <input type="text" class="nuevaAficion" id="inputAficion" name="nuevaAficion">
+          <input type="text" class="nuevaAficion" id="inputAficion" name="nuevaAficion">
         <button onclick="añadirAficion()">Añadir Afición</button>
       </p>
       
