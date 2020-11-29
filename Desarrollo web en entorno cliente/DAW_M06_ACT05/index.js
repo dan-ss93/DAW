@@ -46,7 +46,7 @@ function validarNick(valido = true){
 		user.style.background="green";
 	}
 	if (dato.length <2 || dato.length > 25){
-		user.innerHTML="El nick debe tener entre 2 y 25 carácteres";
+		user.innerHTML="El nick debe tener entre 2 y 25 carácteres. Por ejemplo: Juan";
 		user.style.background="red";
 		correcto = false;
 	}
@@ -66,7 +66,7 @@ function validarPassword(){
 		user.style.background ="green"
 	}
 	else{
-		user.innerHTML="Ha de tener de 4 a 9 carácteres, números o letras.";
+		user.innerHTML="Ha de tener de 4 a 9 carácteres, números o letras. Por ejemplo: G00gl3";
 		user.style.background ="red";
 		correcto = false;
 	}
@@ -79,7 +79,7 @@ function compararPasswords(password1){
 	let password2 = formulario["inputPass2"].value;
 	let user = document.getElementById("password2");
 
-	if (password1==password2){
+	if (password1.value==password2.value){
 		user.innerHTML="Las contraseñas coinciden.";
 		user.style.background="green";
 	}
@@ -103,7 +103,7 @@ function validarEmail(valido = true) {
 		user.style.background="green";
 	}
 	else{
-		user.innerHTML="Formato de mail incorrecto."
+		user.innerHTML="Formato de mail incorrecto. Por ejemplo: info@google.com"
 		user.style.background="red";
 		correcto = false;
 	}
@@ -123,7 +123,7 @@ function validarDNI(valido = true){
 	user.style.background="green";
 	}
 	else{
-		user.innerHTML="Formato incorrecto.";
+		user.innerHTML="Formato incorrecto. Por ejemplo: 58521928S";
 		user.style.background="red";
 		validado = false;
 	}
@@ -132,25 +132,27 @@ function validarDNI(valido = true){
 
 }
 
-/*
+
 function validarAficiones(){
 
 	let correcto = true;
 	let formulario = document.forms["form"];
 	aficiones = document.getElementById("aficiones").selectedIndex;
-	let user = document.getElementById("hobby").value;
-	if (aficiones == null || aficiones == 0){
-		user.innerHTML="Aficiones aceptadas";
+	var user = document.getElementById("idAficiones");
+	if (aficiones >=2){
+		user.textContent= "Aficiones aceptadas.";
 		user.style.background="green";
+		
 	}
 	else{
-		user.innerHTML="No has escogido aficiones";
+		user.textContent= "No has escogido aficiones. Por favor, escoge como mínimo dos." ;
 		user.style.background="red";
 		correcto = false;
 	}
+	
 	return correcto;
 }
-*/
+
 function validarFormulario(){
 
 	let correcto = true;
@@ -161,11 +163,13 @@ function validarFormulario(){
 
 	correcto = validarPassword(correcto);
 
+	correcto = compararPasswords(correcto);
+
 	correcto = validarEmail(correcto);
 
 	correcto = validarDNI(correcto);
 
-	//correcto = validarAficiones(correcto)
+	correcto = validarAficiones(correcto)
 
 	return correcto;
 }

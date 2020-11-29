@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="index.js" defer></script>
 
 </head>
@@ -13,7 +14,7 @@
       <label for="usuario">
           <span>Usuario: </span>
           <input type="text" class="usuario" id="inputNick" name="usuario">
-          <div id="usuario"></div>
+          <element id="usuario"></div>
       </label>
       <p id="nick"></p>
     </p>
@@ -21,13 +22,13 @@
       <label for="password">
           <span>Password: </span>
           <input type="text" class="password" id="inputPass1" name="password">
-          <p id="password1"></p>
+          <element id="password1">
 
       </label>
       <label for="password2">
         <span>Confirma password: </span>
-        <input type="text" class="password2" id="inputPass2" name="password2" >
-        <p id="password2"></p>
+        <input type="text" class="password2" id="inputPass2" name="password2">
+        <element id="password2">
 
     </label>
     </p>
@@ -35,7 +36,7 @@
       <label for="mail">
           <span>Mail: </span>
           <input type="text" class="mail" id="inputEmail" name="mail" value="correo" >
-          <p id="email"></p>
+          <element id="email">
       </label>
       <label for="aficiones">
         <span>Aficiones: </span>
@@ -44,25 +45,28 @@
           <option value="leer">Leer</option>
           <option value="cantar">Cantar</option>
           <option value="bailar">Bailar</option>
-          <p id="hobby"></p>
-         </select>             
+         </select>
+         <element id="idAficiones">
+             
       </label>
-    </p>
     <p>
       <label for="DNI">
           <span>DNI: </span>
           <input type="text" class="DNI" id="inputDNI" name="dni">
-          <p id="dni"></p>
+          <element id="dni">
       </label>
     </p>
+    <p>
       <label for="condiciones"> Acepto las condiciones</label>
           <input type="checkbox" id="aceptar_condiciones" name="aceptar_condiciones">
       <button type="submit">Regístrate</button>
-      <p id="resultado"></p>
+      <element id="resultado">
+      </p>
       <p>
       <button onclick="guardarDatos()">Guardar Datos</button>
       <button onclick="recuperarDatos()">Recuperar Datos</button>
     </p>
+    <br>
       <p>
         <label for="nuevaAficion">Nueva Afición: </label> 
           <input type="text" class="nuevaAficion" id="inputAficion" name="nuevaAficion">
